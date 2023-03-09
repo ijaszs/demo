@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>simple form validation in html and javascript</title>
+    </head>
+    <body>
+        <form  id="form" method="post">
+            <div id="message"></div>
+            <div class="row">
+                <div class="col">
+                  <input type="text" class="form-control" placeholder="Enter email" name="email">
+                </div>
+                <div class="col">
+                  <input type="password" class="form-control2" placeholder="Enter password" name="pswd">
+                </div>
+              </div>
+            <input type="submit" value="register"/>
+        </form>
+    </body>
+    <script>
+        var form = document.getElementById('form')
+        var error = []
+        form.addEventListener('submit',function(e){
+            e.preventDefault()
+            var username = document.getElementsByClassName('form-control')
+            var password = document.getElementsByClassName('form-control2')
+            if(username.value == ""|| password.value == "")
+            alert ("please enter allthe details") 
+
+            var message = document.getElementById('massage')
+            message.innerText = error
+        })
+
+    </script>
+
+</html>
